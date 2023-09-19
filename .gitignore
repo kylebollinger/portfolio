@@ -9,3 +9,6 @@ __pycache__/
 
 # Environments
 .env
+
+# Local Assets
+node_modules/

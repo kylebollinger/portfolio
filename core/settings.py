@@ -30,6 +30,8 @@ INSTALLED_APPS = [
     # Local apps
     'main.apps.MainConfig',
     'projects.apps.ProjectsConfig',
+    # Third party apps
+    'webpack_loader',
 ]
 
 MIDDLEWARE = [

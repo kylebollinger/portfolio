@@ -9,6 +9,7 @@ __pycache__/
 
 # Environments
 .env
+/.venv
 
 # Local Assets
 node_modules/

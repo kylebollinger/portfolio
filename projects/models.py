@@ -11,6 +11,7 @@ class Project(models.Model):
     slug = models.SlugField(max_length=128, unique=True, blank=True)
     uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
     tags = models.ManyToManyField('Tag', blank=True)
+    urls = models.JSONField(null=True, blank=True)
     data = models.JSONField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

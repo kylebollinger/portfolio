@@ -4,7 +4,9 @@
   "description": "Portfolio website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npm run webpack --watch --mode development",
+    "watch": "webpack server --mode development",
+    "prod": "npm run webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -17,7 +19,22 @@
   },
   "homepage": "https://github.com/kylebollinger/portfolio#readme",
   "devDependencies": {
+    "css-loader": "^6.8.1",
     "dotenv": "^16.3.1",
-    "webpack": "^5.88.2"
+    "mini-css-extract-plugin": "^2.7.6",
+    "node-sass": "^9.0.0",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-bundle-tracker": "^2.0.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
+    "stream-browserify": "^3.0.0"
   }
 }

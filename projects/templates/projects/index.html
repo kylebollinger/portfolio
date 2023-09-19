@@ -1,1 +1,9 @@
-<h1>Hello World</h1>
+{% extends 'app.html' %}
+{% block title %}Kyle Bollinger | Projects{% endblock %}
+
+
+{% block content %}
+<h1>Projects</h1>
+<a href="{% url 'home' %}" class="">Home</a>
+
+{% endblock %}

@@ -1,1 +1,3 @@
-web: gunicorn --worker-tmp-dir /dev/shm core.wsgi
+web: gunicorn core.wsgi
+release: npm run prod
+release: python manage.py collectstatic --noinput

@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'projects.apps.ProjectsConfig',
     # Third party apps
     'webpack_loader',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [

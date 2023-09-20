@@ -2,6 +2,7 @@ asgiref==3.7.2
 certifi==2023.7.22
 charset-normalizer==3.2.0
 Django==4.2.5
+django-extensions==3.2.3
 django-webpack-loader==2.0.1
 gunicorn==21.2.0
 idna==3.4

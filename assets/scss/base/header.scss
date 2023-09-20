@@ -1,0 +1,66 @@
+header {
+    width: 100%;
+    min-width: 320px;
+}
+
+.global-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+
+    @media (min-width: 992px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &--logo {
+        display: flex;
+        transition: all 500ms ease-in-out;
+        cursor: pointer;
+        margin-left: 12px; // Burger offset
+
+        svg {
+            width: 100%;
+            height: auto;
+            max-width: 126px;
+        }
+
+        &:hover svg {
+            path.code { stroke: var(--primary-color); }
+        }
+    }
+
+    &--burger {
+        display: flex;
+        align-items: center;
+        outline: none;
+        height: 48px;
+        width: 48px;
+        padding: 12px;
+        border: 0px;
+        background: transparent;
+        transition: all 250ms ease-out;
+        cursor: pointer;
+
+        &:after,
+        &:before {
+            content: '';
+            width: 24px;
+            height: 2px;
+            position: absolute;
+            background: var(--pure-black);
+            transition: all 250ms ease-out;
+            will-change: transform;
+        }
+
+        &:before { transform: translateY(-4px); }
+        &:after { transform: translateY(4px); }
+
+        &.active:before { transform: translateY(0) rotate(45deg); }
+        &.active:after { transform: translateY(0) rotate(-45deg); }
+
+        &:hover:after,
+        &:hover:before { background: var(--primary-color); }
+    }
+}

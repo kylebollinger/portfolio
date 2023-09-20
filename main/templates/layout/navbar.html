@@ -1,0 +1,12 @@
+{% comment %} Set URL Variables {% endcomment %}
+{% url 'projects' as projects_url %}
+
+
+<header>
+  <nav class="global-nav">
+    <a class="global-nav--logo" href="{% url 'home' %}">
+      {% include 'includes/logo.html' %}
+    </a>
+    <button type="button" aria-label="Open global menu" aria-controls="contact-menu" aria-expanded="false" class="global-nav--burger"></button>
+  </nav>
+</header>

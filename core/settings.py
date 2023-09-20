@@ -121,7 +121,7 @@ STATIC_URL = "static/"
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'assets')
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'core/staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'main/staticfiles')
 
 WEBPACK_LOADER = {
     'DEFAULT': {

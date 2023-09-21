@@ -5,8 +5,9 @@ import uuid
 # Create your models here.
 class Project(models.Model):
     title = models.CharField(max_length=256)
+    thumbnail = models.CharField(max_length=256, blank=True)
     summary = models.TextField(null=True, blank=True)
-    details = models.TextField(null=True, blank=True)
+    body = models.TextField(null=True, blank=True)
     year = models.IntegerField(null=True, blank=True)
     slug = models.SlugField(max_length=128, unique=True, blank=True)
     uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)

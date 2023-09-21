@@ -3,7 +3,24 @@
 
 
 {% block content %}
-<h1>Projects</h1>
-<a href="{% url 'home' %}" class="">Home</a>
-
+<section>
+	<div class="container">
+		<h1>Projects</h1>
+		<div class="projects">
+			{% for project in projects %}
+			<article class="project">
+				<a href="{{ project.url }}" class="stretch-link"></a>
+				<figure style="background-image: url('{{ project.thumbnail }}')" alt="{{ project.title }}"></figure>
+				<h3>{{ project.title }}</h3>
+				<p>{{ project.summary }}</p>
+				{% if project.tags.all %}
+				{% for tag in project.tags.all %}
+					<span class="badge">{{ tag.name }}</span>
+				{% endfor %}
+				{% endif %}
+			</article>
+			{% endfor %}
+		</div>
+	</div>
+</section>
 {% endblock %}

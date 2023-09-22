@@ -6,10 +6,11 @@ body {
     height: 100%;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
+    background: #1B1B1B;
+    color: white;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
-}
+main { padding: 24px 0; }
+
+header,
+footer { background-color: #000; }

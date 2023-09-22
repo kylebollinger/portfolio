@@ -1,0 +1,39 @@
+{% extends 'app.html' %}
+{% block title %}Kyle Bollinger{% endblock %}
+
+
+{% block content %}
+<section>
+  <div class="container">
+    <h1>Hello, I'm <span>Kyle.</span></h1>
+    <h3>Seasoned software developer and web designer with a knack for crafting easy to use digital solutions.</h3>
+  </div>
+</section>
+
+{% if projects %}
+<section>
+  <div class="container">
+    <hgroup>
+      <h2>Work</h2>
+      <h4>Here's what I've been up to.</h4>
+    </hgroup>
+    <div class="projects">
+      {% for project in projects %}
+      <article class="project">
+        <a href="{{ project.url }}" class="stretch-link"></a>
+        <figure style="background-image: url('{{ project.thumbnail }}')" alt="{{ project.title }}"></figure>
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.summary }}</p>
+        {% if project.tags.all %}
+        {% for tag in project.tags.all %}
+          <span class="badge">{{ tag.name }}</span>
+        {% endfor %}
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% endblock %}

@@ -7,6 +7,9 @@
     <a class="global-nav--logo" href="{% url 'home' %}">
       {% include 'includes/logo.html' %}
     </a>
-    <button type="button" aria-label="Open global menu" aria-controls="contact-menu" aria-expanded="false" class="global-nav--burger" data-global-nav-btn></button>
+    <ul class="nav">
+      <li><a class="{% if request.path == projects_url %}active{% endif %}" href="{{ projects_url }}">Projects</a></li>
+    </ul>
+    {% comment %} <button type="button" aria-label="Open global menu" aria-controls="contact-menu" aria-expanded="false" class="global-nav--burger" data-global-nav-btn></button> {% endcomment %}
   </nav>
 </header>

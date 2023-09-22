@@ -119,7 +119,7 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'assets')
+    os.path.join(BASE_DIR, 'src')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'main/staticfiles')
 
@@ -127,7 +127,7 @@ WEBPACK_LOADER = {
     'DEFAULT': {
         'CACHE': not DEBUG,
         'BUNDLE_DIR_NAME': '/dist/',
-        'STATS_FILE': os.path.join(BASE_DIR, 'assets', 'webpack-stats.json'),
+        'STATS_FILE': os.path.join(BASE_DIR, 'src', 'webpack-stats.json'),
         'POLL_INTERVAL': 0.1,
         'IGNORE': [r'.+\.hot-update.js', r'.+\.map'],
     }

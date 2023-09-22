@@ -11,18 +11,18 @@ module.exports = {
     context: path.resolve(),
     mode: isDevelopment ? "development" : "production",
     entry: {
-        main: './assets/js/index.js',
-        app: './assets/scss/index.scss',
+        main: './src/js/index.js',
+        app: './src/scss/index.scss',
     },
     output: {
-        path: path.resolve('./assets/dist/'),
+        path: path.resolve('./src/dist/'),
         filename: "[name]-[fullhash:6].js",
         clean: true,
         publicPath: isDevelopment ? 'http://localhost:9091/' : '/static/dist/',
     },
     plugins: [
         new BundleTracker({
-            path: path.join(__dirname, 'assets'),
+            path: path.join(__dirname, 'src'),
             filename: 'webpack-stats.json'
         }),
         new MiniCssExtractPlugin({

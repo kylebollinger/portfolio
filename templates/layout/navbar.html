@@ -8,8 +8,9 @@
       <a class="global-nav--logo" href="{% url 'home' %}">
         {% include 'includes/logo.html' %}
       </a>
-      <ul class="global-nav--nav">
+      <ul class="nav global-nav--nav">
         <li><a class="{% if request.path == projects_url %}active{% endif %}" href="{{ projects_url }}">Projects</a></li>
+        <li><a class="" href="https://kboll.s3.amazonaws.com/bollinger-kyle-resume.pdf" target="_blank">Resume</a></li>
       </ul>
       {% comment %} <button type="button" aria-label="Open global menu" aria-controls="contact-menu" aria-expanded="false" class="global-nav--burger" data-global-nav-btn></button> {% endcomment %}
     </nav>

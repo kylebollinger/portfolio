@@ -1,0 +1,21 @@
+hgroup > * { margin: 0; }
+
+.colorize-title {
+    position: relative;
+    display: inline-block;
+    line-height: 1.5;
+}
+.colorize-title::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    height: 3px;
+    border-radius: 2px;
+    @include primary-gradient();
+}
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }

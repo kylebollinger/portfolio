@@ -14,13 +14,13 @@
 </section>
 
 {% if projects %}
-<section>
+<section class="py-4">
   <div class="container">
-    <hgroup>
-      <h2>Work</h2>
-      <h4>Here's what I've been up to.</h4>
+    <hgroup class="text-center">
+      <h2 class="colorize-title mb-3">Work</h2>
+      <h4>Here's some of the things I've been up to</h4>
     </hgroup>
-    <div class="projects">
+    <div class="projects my-5">
       {% for project in projects %}
       <article class="project">
         <a href="{{ project.url }}" class="stretch-link"></a>

@@ -9,6 +9,7 @@
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/mixins/breakpoints';
 
-@import 'mixins/all.scss';
-@import 'base/all.scss';
-@import 'sections/all.scss';
+@import 'mixins/all';
+@import 'base/all';
+@import 'utilities/all';
+@import 'sections/all';

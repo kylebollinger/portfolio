@@ -3,7 +3,7 @@
         <h3>{{ project.title }}</h3>
         <p>{{ project.summary }}</p>
         {% if project.tags.all %}
-        <div class="tags">
+        <div class="badges">
             {% for tag in project.tags.all %}
             <span class="badge">{{ tag.name }}</span>
             {% endfor %}

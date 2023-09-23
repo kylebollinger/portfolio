@@ -1,31 +1,21 @@
 <footer>
     <div class="container">
-        <div class="row justify-content-between row-cols-1 row-cols-sm-2 zzrow-cols-md-5 py-5 border-top">
-            <div class="col mb-3">
-                <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 48"><rect width="54" height="48" rx="6" fill="#000" class="terminal"/><path d="M13 34.7 23.7 24 13 13.3M28 35h12" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="code"/></a>
-                <p class="text-body-secondary">&copy; Kyle Bolliger</p>
+        <nav class="global-nav">
+            <div class="logo">
+                {% include 'includes/svg/terminal.html' %}
             </div>
 
-            <div class="col mb-3">
-                <div class="row row-cols-1 row-cols-sm-2">
-                    <div class="col mb-3">
-                        <h5>Find Me</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="https://github.com/kylebollinger" class="nav-link p-0 text-body-secondary" target="_blank">Github</a></li>
-                            <li class="nav-item mb-2"><a href="https://linkedin.com/in/kylebollinger" class="nav-link p-0 text-body-secondary" target="_blank">LinkedIn</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col mb-3">
-                        <h5>Sections</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#about" class="nav-link p-0 text-body-secondary">About</a></li>
-                            <li class="nav-item mb-2"><a href="#projects" class="nav-link p-0 text-body-secondary">Projects</a></li>
-                            <li class="nav-item mb-2"><a href="#contact" class="nav-link p-0 text-body-secondary">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="links">
+                <ul class="nav">
+                    <li><a href="https://github.com/kylebollinger" target="_blank">Github</a></li>
+                    <li><a href="https://linkedin.com/in/kylebollinger" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://kboll.s3.amazonaws.com/bollinger-kyle-resume.pdf" target="_blank">Resume</a></li>
+                </ul>
             </div>
-        </div>
+
+            <div class="copy">
+                <p class="m-0">&copy; Kyle Bolliger {% now 'Y' %}</p>
+            </div>
+        </nav>
     </div>
 </footer>

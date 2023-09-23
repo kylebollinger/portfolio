@@ -1,0 +1,25 @@
+footer {
+    width: 100%;
+    min-width: 320px;
+
+    .global-nav {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        // grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-gap: 24px;
+
+        .logo svg { display: flex; }
+        .links { display: flex; justify-content: center; }
+        .links ul { gap: 12px; }
+        .copy { display: flex; justify-content: flex-end; }
+
+        @include media-breakpoint-down(md) {
+            grid-template-columns: 100%;
+
+            .copy { justify-content: center; }
+            .logo { order: 3; }
+            .logo svg { margin: 0 auto; height: 36px; }
+        }
+    }
+}

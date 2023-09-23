@@ -6,7 +6,7 @@
   <div class="container">
     <nav class="global-nav">
       <a class="global-nav--logo" href="{% url 'home' %}">
-        {% include 'includes/logo.html' %}
+        {% include 'includes/svg/logo.html' %}
       </a>
       <ul class="nav global-nav--nav">
         <li><a class="{% if request.path == projects_url %}active{% endif %}" href="{{ projects_url }}">Projects</a></li>

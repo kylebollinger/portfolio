@@ -22,17 +22,7 @@
     </hgroup>
     <div class="projects my-5">
       {% for project in projects %}
-      <article class="project">
-        <a href="{{ project.url }}" class="stretch-link"></a>
-        <figure style="background-image: url('{{ project.thumbnail }}')" alt="{{ project.title }}"></figure>
-        <h3>{{ project.title }}</h3>
-        <p>{{ project.summary }}</p>
-        {% if project.tags.all %}
-        {% for tag in project.tags.all %}
-          <span class="badge">{{ tag.name }}</span>
-        {% endfor %}
-        {% endif %}
-      </article>
+        {% include 'projects/project.html' with project=project %}
       {% endfor %}
     </div>
   </div>

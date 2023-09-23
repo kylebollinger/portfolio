@@ -1,0 +1,20 @@
+<article class="project">
+    <div class="col col-left">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.summary }}</p>
+        {% if project.tags.all %}
+        <div class="tags">
+            {% for tag in project.tags.all %}
+            <span class="badge">{{ tag.name }}</span>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <a href="{{ project.url }}" class="button">View Details</a>
+    </div>
+    <div class="col col-right">
+        <figure>
+            <img src="{{ project.thumbnail }}">
+        </figure>
+        {% comment %} <figure style="background-image: url('{{ project.thumbnail }}')" alt="{{ project.title }}"></figure> {% endcomment %}
+    </div>
+</article>

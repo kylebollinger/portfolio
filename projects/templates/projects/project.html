@@ -1,6 +1,6 @@
 <article class="project">
     <div class="col col-left">
-        <h3>{{ project.title }}</h3>
+        <h3 class="m-0">{{ project.title }}</h3>
         <p>{{ project.summary }}</p>
         {% if project.tags.all %}
         <div class="badges">
@@ -9,7 +9,7 @@
             {% endfor %}
         </div>
         {% endif %}
-        <a href="{{ project.url }}" class="button">View Details</a>
+        <a href="{{ project.url }}" class="mt-5 button button--outline-white">View Details</a>
     </div>
     <div class="col col-right">
         <figure>

@@ -16,7 +16,7 @@
         align-items: flex-start;
     }
 
-    .col.col-right { width: 66.66%; }
+    .col.col-right { width: 66.66%; position: relative; }
 
     figure {
         height: 100%;
@@ -48,6 +48,8 @@
 
         .col.col-left,
         .col.col-right { width: 100%; }
+
+        .col.col-right { order: -1; }
     }
 
     @include media-breakpoint-down(sm) {

@@ -6,8 +6,8 @@
     padding: 60px;
     gap: 36px;
     border-radius: 24px;
-    border: 1px solid var(--shade-3, #3B3B3B);
-    background: var(--shade-4, #121212);
+    // background: var(--gray-950, #121212);
+    background-color: hsla(0,0%,100%,.08);
 
     .col.col-left {
         width: 33.33%;
@@ -48,7 +48,6 @@
 
         .col.col-left,
         .col.col-right { width: 100%; }
-
         .col.col-right { order: -1; }
     }
 

@@ -1,0 +1,58 @@
+.bg-left,
+.bg-right {
+    border-radius: 9999px;
+    border-style: solid;
+    border-width: 0px;
+    border-color: rgb(229, 231, 235);
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    display: block;
+    position: absolute;
+    z-index: -10;
+    height: 500px;
+    width: 50rem;
+    filter: blur(160px);
+
+    @include media-breakpoint-up(sm) {
+        width: 68.75rem;
+    }
+}
+
+.bg-left {
+    background-color: rgb(98, 148, 146);
+    background-color: rgb(40, 105, 96);
+    background-color: rgba(253, 101, 133, 0.4);
+    // background-color: #FD6585;
+    background-color: rgba(94, 252, 231, 0.4);
+    left: -35rem;
+    top: -1rem;
+
+
+    @include media-breakpoint-between(sm,md) {
+        left: -33rem;
+    }
+
+    @include media-breakpoint-between(md,lg) {
+        left: -28rem;
+    }
+
+    @include media-breakpoint-between(lg,xl) {
+        left: -15rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        left: -5rem;
+    }
+}
+.bg-right {
+    background-color: rgb(121, 98, 148);
+    background-color: rgb(48, 47, 99);
+    background-color: #FFD3A5;
+    background-color: rgba(115, 110, 254, 0.4);
+    
+    right: 11rem;
+    top: -6rem;
+}

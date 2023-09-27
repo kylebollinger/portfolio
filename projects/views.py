@@ -10,6 +10,9 @@ def index(request):
 
 def project(request, slug):
     project = Project.objects.get(slug=slug)
-    context = { 'project': project }
+    gallery = project.gallery_set.get(project_id=project.id)
+    context = { 'project': project, 'gallery': gallery }
+
+    print(f"context: {context}")
 
     return render(request, 'projects/project_details.html', context)

@@ -61,4 +61,7 @@ class GalleryItem(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return str(self.gallery)
+        if self.title:
+            return f"{str(self.gallery)} - {self.title}"
+        else:
+            return str(self.gallery)

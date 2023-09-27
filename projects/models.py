@@ -39,3 +39,26 @@ class Tag(models.Model):
             self.name = self.name.lower().strip()
             self.slug = slugify(self.name)
         super().save(*args, **kwargs)
+
+
+class Gallery(models.Model):
+    project_id = models.ForeignKey(Project, on_delete=models.CASCADE)
+    title = models.CharField(max_length=256, null=True, blank=True)
+    data = models.JSONField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.project_id
+
+class GalleryItem(models.Model):
+    gallery_id = models.ForeignKey(Gallery, on_delete=models.CASCADE)
+    title = models.CharField(max_length=256, null=True, blank=True)
+    caption = models.CharField(max_length=256, null=True, blank=True)
+    url = models.CharField(max_length=256, null=True, blank=True)
+    data = models.JSONField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.gallery_id

@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import F
 from django.utils.text import slugify
 import uuid
 
@@ -63,6 +64,9 @@ class GalleryItem(models.Model):
     data = models.JSONField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = [F('order').asc(nulls_last=True)]
 
     def __str__(self):
         if self.title:

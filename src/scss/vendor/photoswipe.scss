@@ -24,3 +24,17 @@
 }
 
 .hidden-caption-content { display: none; }
+
+.pswp-gallery {
+  display: flex;
+  flex-flow: wrap;
+  gap: 12px;
+
+  figure { margin: 0;}
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height:200px;
+  }
+}

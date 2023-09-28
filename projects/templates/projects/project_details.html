@@ -5,25 +5,28 @@
 {% block content %}
 <section>
   <div class="container-xxl">
-        <h1>{{ project.title }}</h1>
+    <h1>{{ project.title }}</h1>
   </div>
 </section>
 
 {% if gallery %}
 <section>
   <div class="container-xxl">
-    <div class="pswp-gallery pswp-gallery--single-column" id="my-gallery">
+    <div class="pswp-gallery">
       {% for item in gallery.galleryitem_set.all.values %}
         <figure class="pswp-gallery__item">
-          <h2>{{ item.title }}</h2>
           <a 	href="{{ item.url }}"
               data-pswp-width="{{ item.width }}"
               data-pswp-height="{{ item.height }}"
+              data-cropped="true"
               target="_blank">
             <img src="{{ item.thumb }}" alt="{{ item.title }}" />
           </a>
           {% if item.caption %}
-            <figcaption class="hidden-caption-content">{{item.caption}}</figcaption>
+            <figcaption class="hidden-caption-content">
+              <h6>{{ item.title }}</h6>
+              <p>{{ item.caption }}</p>
+            </figcaption>
           {% endif %}
         </figure>
       {% endfor %}

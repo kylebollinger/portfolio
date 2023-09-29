@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Project
+from .models import Project, Gallery
 
 
 def index(request):
@@ -10,9 +10,7 @@ def index(request):
 
 def project(request, slug):
     project = Project.objects.get(slug=slug)
-    gallery = project.gallery_set.get(project_id=project.id)
-    context = { 'project': project, 'gallery': gallery }
-
-    print(f"context: {context}")
+    galleries = Gallery.objects.filter(project_id=project.id)
+    context = { 'project': project, 'galleries': galleries }
 
     return render(request, 'projects/project_details.html', context)

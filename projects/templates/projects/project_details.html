@@ -6,12 +6,21 @@
 <section>
   <div class="container-xxl">
     <h1>{{ project.title }}</h1>
+    <article>
+      {{ project.body|safe }}
+    </article>
   </div>
 </section>
 
-{% if gallery %}
+{% if galleries %}
 <section>
   <div class="container-xxl">
+    {% for gallery in galleries %}
+    {% if galleries|length > 1 %}
+      <h2>{{ gallery.title }}</h2>
+    {% else %}
+      <h2>UI Screenshots</h2>
+    {% endif %}
     <div class="pswp-gallery">
       {% for item in gallery.galleryitem_set.all.values %}
         <figure class="pswp-gallery__item">
@@ -31,6 +40,7 @@
         </figure>
       {% endfor %}
     </div>
+    {% endfor %}
   </div>
 </section>
 {% endif %}

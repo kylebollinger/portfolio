@@ -29,7 +29,7 @@
               data-pswp-height="{{ item.height }}"
               data-cropped="true"
               target="_blank">
-            <img src="{{ item.thumb }}" alt="{{ item.title }}" />
+            <img src="{% if item.thumb %}{{ item.thumb }}{% else %}{{ item.url }}{% endif %}" alt="{{ item.title }}" />
           </a>
           {% if item.caption %}
             <figcaption class="hidden-caption-content">

@@ -45,12 +45,20 @@ class Tag(models.Model):
 class Gallery(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
     title = models.CharField(max_length=256, null=True, blank=True)
+    order = models.IntegerField(default=1)
     data = models.JSONField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        ordering = [F('order').asc(nulls_last=True)]
+
     def __str__(self):
-        return str(self.project)
+        if self.title:
+            return f"{str(self.project)} - {self.title}"
+        else:
+            return str(self.project)
+
 
 class GalleryItem(models.Model):
     gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE)

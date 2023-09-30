@@ -26,7 +26,7 @@ gallery.on('uiRegister', function() {
             captionHTML = hiddenCaption.innerHTML;
           } else {
             // get caption from alt attribute
-            captionHTML = currSlideElement.querySelector('img').getAttribute('alt');
+            captionHTML = currSlideElement.querySelector('.gallery--image').getAttribute('alt');
           }
         }
         el.innerHTML = captionHTML || '';

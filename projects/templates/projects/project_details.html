@@ -28,8 +28,9 @@
               data-pswp-width="{{ item.width }}"
               data-pswp-height="{{ item.height }}"
               data-cropped="true"
-              target="_blank">
-            <img src="{% if item.thumb %}{{ item.thumb }}{% else %}{{ item.url }}{% endif %}" alt="{{ item.title }}" />
+              target="_blank"
+              alt="{{item.title}}">
+            <div class="gallery--image" style="background-image: url('{% if item.thumb %}{{ item.thumb }}{% else %}{{ item.url }}{% endif %}')"></div>
           </a>
           {% if item.caption %}
             <figcaption class="hidden-caption-content">

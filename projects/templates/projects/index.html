@@ -4,13 +4,13 @@
 
 {% block content %}
 <section>
-	<div class="container">
-		<h1>Projects</h1>
-		<div class="projects">
-			{% for project in projects %}
-			{% include 'projects/partials/project.html' %}
-			{% endfor %}
-		</div>
-	</div>
+  <div class="container-xxl">
+    <h1>Projects</h1>
+    <div class="projects">
+      {% for project in projects %}
+      {% include 'projects/partials/project.html' %}
+      {% endfor %}
+    </div>
+  </div>
 </section>
 {% endblock %}

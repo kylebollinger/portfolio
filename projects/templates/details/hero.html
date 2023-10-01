@@ -1,0 +1,21 @@
+<section class="hero hero--project">
+  <div class="container">
+    <hgroup>
+      <h1>{{ project.title }}</h1>
+      {% if project.subtitle %}<h2>{{ project.subtitle }}</h2>{% endif %}
+    </hgroup>
+    {% if project.summary %}<h4>{{ project.summary }}</h4>{% endif %}
+
+    {% if project.website_url or project.source_code_url %}
+    <div class="button-group">
+      {% if project.website_url %}
+      <a href = "{{ project.website_url }}" target="_blank" class="button button--primary">Visit Website</a>
+      {% endif %}
+
+      {% if project.source_code_url %}
+      <a href = "{{ project.source_code_url }}" target="_blank" class="button button--secondary">View Source Code</a>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+</section>

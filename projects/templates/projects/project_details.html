@@ -3,18 +3,19 @@
 
 
 {% block content %}
-<section>
-  <div class="container-xxl">
+
+{% include 'details/hero.html' %}
+
+<div class="container">
+  <section>
     <h1>{{ project.title }}</h1>
     <article>
       {{ project.body|safe }}
     </article>
-  </div>
-</section>
+  </section>
 
-{% if galleries %}
-<section>
-  <div class="container-xxl">
+  {% if galleries %}
+  <section>
     {% for gallery in galleries %}
     {% if galleries|length > 1 %}
       <h2>{{ gallery.title }}</h2>
@@ -42,8 +43,8 @@
       {% endfor %}
     </div>
     {% endfor %}
-  </div>
-</section>
-{% endif %}
+  </section>
+  {% endif %}
+</div>
 
 {% endblock %}

@@ -24,11 +24,19 @@
   }
 
 .button.button--primary {
-    background-color: var(--primary-color);
-    color: var(--pure-white);
+    background-color: $cyan-400;
+    color: $gray-950;
 
-    &:hover { background-color: var(--gray-300); }
-    &:disabled { background-color: var(--gray-300); }
+    &:hover { background-color: $cyan-600; }
+    &:disabled { background-color: $cyan-600; color: $gray-800; }
+}
+
+.button.button--secondary {
+    background-color: $gray-300;
+    color: $gray-950;
+
+    &:hover { background-color: $gray-500; }
+    &:disabled { background-color: $gray-600; color: $gray-800; }
 }
 
 .button--outline-white {

@@ -28,6 +28,16 @@ class Project(models.Model):
             self.slug = slugify(self.title)
         super().save(*args, **kwargs)
 
+    @property
+    def website_url(self):
+        if self.urls and 'live_website' in self.urls:
+            return self.urls['live_website']
+
+    @property
+    def source_code_url(self):
+        if self.urls and 'source_code' in self.urls:
+            return self.urls['source_code']
+
 class Tag(models.Model):
     name = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=128, unique=True, blank=True)

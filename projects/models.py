@@ -6,7 +6,9 @@ import uuid
 # Create your models here.
 class Project(models.Model):
     title = models.CharField(max_length=256)
+    subtitle = models.CharField(max_length=256, null=True, blank=True)
     thumbnail = models.CharField(max_length=256, blank=True)
+    favicon = models.CharField(max_length=256, null=True, blank=True)
     summary = models.TextField(null=True, blank=True)
     body = models.TextField(null=True, blank=True)
     year = models.IntegerField(null=True, blank=True)

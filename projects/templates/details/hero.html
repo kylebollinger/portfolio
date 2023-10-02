@@ -9,13 +9,17 @@
     {% if project.website_url or project.source_code_url %}
     <div class="button-group">
       {% if project.website_url %}
-      <a href = "{{ project.website_url }}" target="_blank" class="button button--primary">Visit Website</a>
+      <a href = "{{ project.website_url }}" target="_blank" class="button button--secondary">Visit Website</a>
       {% endif %}
 
       {% if project.source_code_url %}
-      <a href = "{{ project.source_code_url }}" target="_blank" class="button button--secondary">View Source Code</a>
+      <a href = "{{ project.source_code_url }}" target="_blank" class="button button--secondary">Source Code</a>
       {% endif %}
     </div>
     {% endif %}
   </div>
+
+  <figure class="hero--image">
+    <img src="{{ project.hero }}" alt="{{ project.title }}">
+  </figure>
 </section>

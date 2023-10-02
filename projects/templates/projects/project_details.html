@@ -5,17 +5,12 @@
 {% block content %}
 
 {% include 'details/hero.html' %}
+{% include 'details/body.html' %}
 
-<div class="container">
-  <section>
-    <h1>{{ project.title }}</h1>
-    <article>
-      {{ project.body|safe }}
-    </article>
-  </section>
 
-  {% if galleries %}
-  <section>
+{% if galleries %}
+<section>
+  <div class="container">
     {% for gallery in galleries %}
     {% if galleries|length > 1 %}
       <h2>{{ gallery.title }}</h2>
@@ -43,8 +38,9 @@
       {% endfor %}
     </div>
     {% endfor %}
-  </section>
-  {% endif %}
-</div>
+  </div>
+</section>
+{% endif %}
+
 
 {% endblock %}

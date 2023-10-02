@@ -6,11 +6,11 @@
     {% render_bundle 'app' %}
   </head>
 
-  <body>
+  <body class="{% block body_class %}{% endblock %}">
     <div class="bg-right"></div>
     <div class="bg-left"></div>
     {% include 'layout/navbar.html' %}
-    <main>
+    <main class="{% block main_class %}{% endblock %}">
       {% block content %}
       {% endblock %}
     </main>

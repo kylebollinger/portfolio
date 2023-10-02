@@ -1,3 +1,15 @@
+// Hollow header
+.unified header {
+    position: sticky;
+    top: 0;
+    background-color: rgba($gray-950, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.unified main { margin-top: -56px; }
+.unified main > *:first-child { padding-top: 56px; }
+
 header {
     width: 100%;
     min-width: 320px;

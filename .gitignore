@@ -18,3 +18,4 @@ dist/
 src/dist/
 src/bundles/
 src/webpack-stats.json
+projects/html

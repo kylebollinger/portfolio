@@ -1,0 +1,49 @@
+.details { background-color: black; }
+.details main section + section {
+    margin-top: 48px;
+}
+
+
+.project-details {
+
+    article {
+        font-size: 1.125rem;
+        max-width: 672px;
+        margin: 0 auto;
+        line-height: 1.5;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        ol, ul {
+            line-height: 1.5;
+            li + li { margin-top: 12px; }
+        }
+
+        figure { margin: 3rem 2rem; }
+
+        figcaption {
+            margin-top: 4px;
+            text-align: center;
+            font-size: 0.875rem;
+            color: $gray-500;
+        }
+
+        .colorize-title {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+.project--list {
+    display: grid;
+    grid-template-columns: 35px auto;
+    grid-column-gap: 12px;
+    grid-row-gap: 35px;
+    font-size: 17px;
+    font-weight: 300;
+    margin: 0;
+}

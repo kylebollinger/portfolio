@@ -22,8 +22,17 @@
             li + li { margin-top: 12px; }
         }
 
-        figure { margin: 3rem 2rem; }
+        iframe { width: 100%; }
 
+        figure {
+            position: relative;
+            width: 100%;
+            margin: 3rem 2rem;
+        }
+
+        @include media-breakpoint-down(md) {
+            figure { margin: 3rem 0; }
+        }
         figcaption {
             margin-top: 4px;
             text-align: center;

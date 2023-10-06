@@ -3,7 +3,7 @@ from .models import Project, Gallery
 
 
 def index(request):
-    projects = Project.objects.all().order_by('year').values()
+    projects = Project.objects.all()
     context = { 'projects': projects }
 
     return render(request, 'projects/index.html', context)

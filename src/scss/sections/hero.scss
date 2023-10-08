@@ -94,6 +94,7 @@
         position: relative;
         display: flex;
         max-width: 1200px;
+        overflow: hidden;
         margin: 0 auto;
         padding: 0 24px;
 
@@ -104,6 +105,8 @@
     }
 
     .hero--overlay {
+        width: 500%;
+        margin-left: -200%;
         position: absolute;
         left: 0;
         bottom: 0;
